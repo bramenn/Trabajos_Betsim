@@ -1,26 +1,30 @@
 body{
 	background-color: #e8eaed;
+
 }
 .modal-container{  
 	opacity: 0;
 	visibility: hidden;
 	position: fixed;
-	z-index: 1000;
+	z-index: 1;
 	width: 100%;
-	height: 80vh;
+	height: 90vh;
 	top: 0;
 	left: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	overflow-y: initial !important
+	overflow-y: initial !important;
+	
+
 
 }
 
 .modal{
+
 	display: block !important;
-	border-radius: 1em;
-	border:5px solid white; 
+	border-radius: 5em;
+	border:5px solid #e5b332; 
 	width: 50%;
 	height: 60%;
 	text-align: center;
@@ -28,32 +32,36 @@ body{
 	justify-content: space-evenly;
 	position: relative;
 	transition: transform 2s;
-	transform: translateY(0%);
+	transform: translateY(10%);
 	background: rgba(0,0,0,0.5); 
-	overflow-y: initial !important
-	height: 250px;
+	overflow-y: initial !important;
+	height: 350px;
     overflow-y: auto;
+    border-style: dashed;
 
 
 }
 
 .modal-close{
+
 	transform: translateY(-200%);
+
 }
 
 
 .texto_modal{
 	font-family: Arial;
 	margin: 10px;
-	font-size: 22px;
-	text-align: justify;
+	font-size: 28px;
+	text-align: center;
 	color: white;
+
 }
 
 .ganaste{
 	font-family: Arial;
 	margin: 10px;
-	font-size: 22px;
+	font-size: 30px;
 	text-align: center;
 	color: white;
 }
