@@ -91,6 +91,10 @@ div.prueba{
 
 
 @media all and (max-width: 850px){
+	.box{
+		padding-top: 7%;
+		vertical-align: middle;
+	}
 
 	.modal-container{  
 	opacity: 1;
