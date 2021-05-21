@@ -25,8 +25,7 @@ body{
 	display: block !important;
 	border-radius: 5em;
 	border:5px solid #e5b332; 
-	width: 50%;
-	height: 60%;
+	width: 60%;
 	text-align: center;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -35,16 +34,10 @@ body{
 	transform: translateY(10%);
 	background: rgba(0,0,0,0.5); 
 	overflow-y: initial !important;
-	height: 350px;
+	height: 55%;
     overflow-y: auto;
     border-style: dashed;
 
-
-}
-
-.modal-close{
-
-	transform: translateY(-200%);
 
 }
 
@@ -65,6 +58,65 @@ body{
 	text-align: center;
 	color: white;
 }
+
+@media all and (max-width: 850px){
+	.modal{
+
+	display: block !important;
+	border-radius: 5em;
+	border:5px solid #e5b332; 
+	width: 90%;
+	text-align: center;
+	flex-direction: column;
+	justify-content: space-evenly;
+	position: relative;
+	transition: transform 2s;
+	transform: translateY(-5%);
+	background: rgba(0,0,0,0.5); 
+	overflow-y: initial !important;
+	height: 50%;
+    overflow-y: auto;
+    border-style: dashed;
+
+}
+
+.texto_modal{
+	font-family: Arial;
+	margin: 10px;
+	font-size: 20px;
+	text-align: center;
+	color: white;
+
+}
+
+.ganaste{
+	font-family: Arial;
+	margin: 0px;
+	font-size: 22px;
+	text-align: center;
+	color: white;
+}
+
+}
+
+@media all and (max-width: 500px){
+
+button{
+	width: 60%;
+}
+
+}
+
+
+.modal-close{
+
+	transform: translateY(-200%);
+
+}
+
+
+
+
 #img_bycoins{
 	    width: 35px;
 	    height: 35px;
