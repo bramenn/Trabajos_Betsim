@@ -2,13 +2,13 @@ let modal_es = '<p class="ganaste">Has ganado</p>'+
             '<div class="prueba">'+
             '<img src="static/imagenes/bycoin.png" id="img_bycoins">  <p id="num_aleator">0</p> </div>'+
             '<p class="texto_modal">Continua acumulando y canjea premios como PS4, XBOX, dinero en PayPal y mucho más!</p> </p>'+
-            '<div class="prueb2"><button type="button" class="btn btn-primary" onclick="fuct_1()">Ver premios</button><button type="button" class="btn btn-warning" onclick="fuct_2()">Jugar ahora</button><button type="button" class="btn btn-success" onclick="fuct_3()">Más información</button>';
+            '<div class="prueb2"><button type="button" class="btn btn-danger animated flash" onclick="fuct_1()">Ver premios</button><button type="button" class="btn btn-warning" onclick="fuct_2()">Jugar ahora</button>';
 
 let modal_en = '<p class="ganaste">You won</p>'+
     '<div class="prueba">'+
     '<img src="static/imagenes/bycoin.png" id="img_bycoins">  <p id="num_aleator">0</p> </div>'+
     '<p class="texto_modal">Continue accumulating and redeem prizes like PS4, Xbox, PayPal money and many more!</p> </p>'+
-    '<div class="prueb2"><button type="button" class="btn btn-primary" onclick="fuct_1()">See prizes</button><button type="button" class="btn btn-warning" onclick="fuct_2()">Play Now!</button><button type="button" class="btn btn-success" onclick="fuct_3()">More info</button>';
+    '<div class="prueb2"><button type="button" class="btn btn-danger animated flash" onclick="fuct_1()">See prizes</button><button type="button" class="btn btn-warning" onclick="fuct_2()">Play Now!</button>';
 
 let score = 0;
 
@@ -19,7 +19,7 @@ function generar_num(num) {
 
 
 function fuct_1() {
-	window.location="https://prizesbetsim.com";
+	window.location="https://betsimprizes.com";
 }
 
 function fuct_2() {
@@ -69,6 +69,8 @@ window.onload = function () {
    }
 }
 
+
+
 window.addEventListener( "message", function (e) {
             //alert(e.data);
             if (e.data != "") {
@@ -79,11 +81,13 @@ window.addEventListener( "message", function (e) {
               modalC.style.opacity = "1";
               modalC.style.visibility = "visible";
               modal.classList.toggle("modal-close");
+
             }
             
 
 
 }, false);
+
 
 
 
