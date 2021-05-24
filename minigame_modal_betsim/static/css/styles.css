@@ -1,6 +1,12 @@
-*{
+body{
 
+	background-color: #1068A8;
 }
+
+/*-----------------------------------------*/
+/*Configuracion para celulares en vertical*/
+@media (max-width:2000px){
+	
 
 .modal-container{  
 	opacity: 1;
@@ -32,12 +38,12 @@
 	overflow-y: initial !important;
 	height: 55%;
     overflow-y: auto;
-	background: rgba(0,0,0,0.8); 
-	background-image: url("confite.gif");
+	background-image: url("confeti.jpg");
     color: #69D2E7;
 	outline: 15px dashed #e5b332;
 	box-shadow: 0 0 0 10px red;
 	animation: 0.5s animateBorderOne ease infinite;
+
 
 
 }
@@ -54,7 +60,7 @@
 .texto_modal{
 	font-family: Cambria;
 	margin: 10px;
-	font-size: 28px;
+	font-size: 26px;
 	text-align: center;
 	color: white;
 
@@ -71,7 +77,7 @@
 
 iframe{
 	border: 5px solid gray;
-	margin: 5% 0 5% 2%;
+	margin: 5% 0 0 2%;
 	width: 30%;
 	height: 590px;
 }
@@ -84,12 +90,6 @@ iframe{
 	    height: 35px;
 	    margin: -5px 10px 0px 5px;
 }
-a{
-	font-size: 22px;
-	font-family: Arial;
-	text-decoration: none;
-	color: white;
-}
 
 div.prueba{
 	display:inline-flex;
@@ -98,18 +98,59 @@ div.prueba{
 }
 
 
-@media all and (max-width: 850px){
+.animated {
+ -webkit-animation-duration: 2s;
+ animation-duration: 5s;
+ -webkit-animation-fill-mode: both;
+ animation-fill-mode: both;
+ -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes flash {
+ 0%, 50%, 100% {
+ opacity: 1;
+ }
+25%, 75% {
+ opacity: 0;
+ }
+}
+@keyframes flash {
+ 0%, 50%, 100% {
+ opacity: 1;
+ }
+25%, 75% {
+ opacity: 0;
+ }
+}
+
+.flash {
+ -webkit-animation-name: flash;
+ animation-name: flash;
+}
+
+
+}
+
+/*-----------------------------------------*/
+
+
+
+/*-----------------------------------------*/
+/*Configuracion para celulares en vertical*/
+@media (max-width:680px){
 	.box{
-		padding-top: 7%;
+		display: flex;
+		justify-content: center;
+		margin: 5% auto;
 	}
 
 	.modal-container{  
-	opacity: 1;
+	
 	visibility: hidden;
 	position: fixed;
 	z-index: 1;
 	width: 95%;
-	height: 100%;
+	height: 80%;
 	top: 0;
 	left: 0;
 	display: flex;
@@ -131,7 +172,8 @@ div.prueba{
 	position: relative;
 	transition: transform 2s;
 	transform: translateY(-5%);
-	background: rgba(0,0,0,0.8); 
+	/*background: rgba(0,0,0,0.8); */
+	background-image: url("confeti.jpg");
 	overflow-y: initial !important;
 	height: 50%;
     overflow-y: auto;
@@ -148,6 +190,12 @@ div.prueba{
     outline-color: orange;
     box-shadow: 10px 10px 0 10px #00226b;
   }
+
+
+button{
+	width: 60%;
+}
+
 }
 
 
@@ -180,14 +228,74 @@ div.prueba{
 
 iframe{
 	border: 5px solid gray;
-	margin: 9% 0 10% 7%;
+	margin: 9% auto;
 	width: auto;
 	height: 540px;
 }
 
 }
 
-@media all and (max-width: 500px){
+/*-----------------------------------------*/
+
+
+
+
+/*-----------------------------------------*/
+/*Configuracion para celulares en vertical*/
+@media (max-width:500px){
+	.box{
+		display: flex;
+		justify-content: center;
+		margin: 8% auto;
+	}
+
+	.modal-container{  
+	
+	visibility: hidden;
+	position: fixed;
+	z-index: 1;
+	width: 95%;
+	height: 80%;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow-y: initial !important;
+	
+
+
+}
+
+	.modal{
+
+	display: block !important;
+	width: 80%;
+	text-align: center;
+	flex-direction: column;
+	justify-content: space-evenly;
+	position: relative;
+	transition: transform 2s;
+	transform: translateY(-5%);
+	/*background: rgba(0,0,0,0.8); */
+	background-image: url("confeti.jpg");
+	overflow-y: initial !important;
+	height: 50%;
+    overflow-y: auto;
+
+    color: #69D2E7;
+	outline: 8px dashed #e5b332;
+	box-shadow: 0 0 0 10px red;
+	animation: 0.5s animateBorderOne ease infinite;
+
+}
+
+@keyframes animateBorderOne {
+  to {
+    outline-color: orange;
+    box-shadow: 10px 10px 0 10px #00226b;
+  }
+
 
 button{
 	width: 60%;
@@ -195,44 +303,47 @@ button{
 
 }
 
-.bloque{
-	/*background:url("fondo_minijuegos_2.jpg")repeat fixed;*/
-	background-color: #1068A8;
-	height: 100%;
+
+.texto_modal{
+	font-family: Arial;
+	font-size: 20px;
+	text-align: center;
+	color: white;
+
+	line-height: 1.2;
+
 }
 
-button{
+.ganaste{
+	font-family: Arial;
+	margin: 0px;
+	font-size: 22px;
+	text-align: center;
+	color: white;
 }
 
-.animated {
- -webkit-animation-duration: 2s;
- animation-duration: 2s;
- -webkit-animation-fill-mode: both;
- animation-fill-mode: both;
- -webkit-animation-iteration-count: infinite;
-}
 
-@-webkit-keyframes flash {
- 0%, 50%, 100% {
- opacity: 1;
- }
-25%, 75% {
- opacity: 0;
- }
-}
-@keyframes flash {
- 0%, 50%, 100% {
- opacity: 1;
- }
-25%, 75% {
- opacity: 0;
- }
-}
+.modal-close{
 
-.flash {
- -webkit-animation-name: flash;
- animation-name: flash;
+	transform: translateY(-200%);
+
 }
 
 
 
+iframe{
+	border: 5px solid gray;
+	margin: 9% auto;
+	width: auto;
+	height: 540px;
+}
+
+}
+
+/*-----------------------------------------*/
+
+@media (max-width:400px){
+	.modal-container{
+		height: 100%;
+	}
+}

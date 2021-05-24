@@ -55,9 +55,8 @@ window.onload = function () {
    let idioma = ln.split("-");
    console.log(idioma );
    if (idioma[0] == 'en') {
-
      document.getElementById('language').innerHTML='en'
-     document.getElementById('contenedor').innerHTML=model_en;
+     document.getElementById('contenedor').innerHTML=modal_en;
 
    } 
    else if (idioma[0] == 'es') {
@@ -76,6 +75,9 @@ window.addEventListener( "message", function (e) {
             if (e.data != "") {
               let modal = document.querySelectorAll(".modal")[0];
               let modalC = document.querySelectorAll(".modal-container")[0];
+
+              let box = document.querySelectorAll(".box")[0];
+              box.style["pointer-events"] = "none";
               score = e.data;
               generar_num(score);
               modalC.style.opacity = "1";
