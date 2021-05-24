@@ -74,6 +74,44 @@ body{
 	color: white;
 }
 
+.img_points{
+	animation: blur 0.5s ease-out;
+  	animation-duration: 2s;
+  	text-shadow:0px 0px 5px red,
+      0px 0px 7px #e5b332;
+
+}
+
+#img_points_ID{
+
+  display: inline-flex;
+  text-align: center;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 1000;
+  text-transform: uppercase;
+
+
+  
+}
+
+
+@keyframes blur{
+  from{
+      text-shadow: 0px 0px 10px #e5b332,
+      0px 0px 10px #e5b332, 
+      0px 0px 25px #e5b332,
+      0px 0px 25px #e5b332,
+      0px 0px 25px #e5b332,
+      0px 0px 25px #e5b332,
+      0px 0px 15px #e5b332,
+      0px 0px 15px #e5b332,
+      0px 0px 15px #e5b332,
+      0px 0px 5px #e5b332,
+      0px 0px 5px #e5b332,
+      0px 0px 5px #e5b332
+	  }
+}
 
 iframe{
 	border: 5px solid gray;
@@ -88,19 +126,14 @@ iframe{
 #img_bycoins{
 	    width: 35px;
 	    height: 35px;
-	    margin: -5px 10px 0px 5px;
-}
-
-div.prueba{
-	display:inline-flex;
-	color: white;
-	font-size: 20px;
+	    margin: 5px 10px 0px 5px;
 }
 
 
-.animated {
+
+.animatet {
  -webkit-animation-duration: 2s;
- animation-duration: 5s;
+ animation-duration: 3.5s;
  -webkit-animation-fill-mode: both;
  animation-fill-mode: both;
  -webkit-animation-iteration-count: infinite;
@@ -342,7 +375,7 @@ iframe{
 
 /*-----------------------------------------*/
 
-@media (max-width:400px){
+@media (max-width:430px){
 	.modal-container{
 		height: 100%;
 	}

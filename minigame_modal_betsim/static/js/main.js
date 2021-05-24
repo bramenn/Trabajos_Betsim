@@ -1,22 +1,20 @@
 let modal_es = '<p class="ganaste">Has ganado</p>'+
-            '<div class="prueba">'+
+            '<div  id="img_points_ID">'+
             '<img src="static/imagenes/bycoin.png" id="img_bycoins">  <p id="num_aleator">0</p> </div>'+
             '<p class="texto_modal">Continua acumulando y canjea premios como PS4, XBOX, dinero en PayPal y mucho más!</p> </p>'+
-            '<div class="prueb2"><button type="button" class="btn btn-danger animated flash" onclick="fuct_1()">Ver premios</button><button type="button" class="btn btn-warning" onclick="fuct_2()">Jugar ahora</button>';
+            '<div class="prueb2"><button type="button" class="btn btn-danger animatet flash" onclick="fuct_1()">Ver premios</button><button type="button" class="btn btn-warning" onclick="fuct_2()">Jugar ahora</button>';
 
 let modal_en = '<p class="ganaste">You won</p>'+
-    '<div class="prueba">'+
+    '<div  id="img_points_ID">'+
     '<img src="static/imagenes/bycoin.png" id="img_bycoins">  <p id="num_aleator">0</p> </div>'+
     '<p class="texto_modal">Continue accumulating and redeem prizes like PS4, Xbox, PayPal money and many more!</p> </p>'+
-    '<div class="prueb2"><button type="button" class="btn btn-danger animated flash" onclick="fuct_1()">See prizes</button><button type="button" class="btn btn-warning" onclick="fuct_2()">Play Now!</button>';
+    '<div class="prueb2"><button type="button" class="btn btn-danger animatet flash" onclick="fuct_1()">See prizes</button><button type="button" class="btn btn-warning" onclick="fuct_2()">Play Now!</button>';
+
+
+
+
 
 let score = 0;
-
-function generar_num(num) {
-	console.log(num);
-	document.getElementById('num_aleator').innerHTML= num;
- }
-
 
 function fuct_1() {
 	window.location="https://betsimprizes.com";
@@ -73,13 +71,37 @@ window.onload = function () {
 window.addEventListener( "message", function (e) {
             //alert(e.data);
             if (e.data != "") {
+
+
+              let corazon = document.getElementById("img_points_ID");
+              corazon.setAttribute("class","img_points");
+               console.log(corazon);
+
+              // Para navegadores -webkit-
+              corazon.addEventListener("webkitAnimationStart",function () {}, false);
+              
+              corazon.addEventListener("webkitAnimationEnd",function(){ /* stuff */});
+              // La sintaxis estandar
+              corazon.addEventListener("animationstart",function(){ /* stuff */}, false);
+              
+              corazon.addEventListener("animationend",function(){ /* stuff */}, false);
+
+              setTimeout(function() {
+                corazon.removeAttribute("class") ;
+
+              }, 5000);
+              
+
+
+
               let modal = document.querySelectorAll(".modal")[0];
               let modalC = document.querySelectorAll(".modal-container")[0];
 
               let box = document.querySelectorAll(".box")[0];
               box.style["pointer-events"] = "none";
               score = e.data;
-              generar_num(score);
+              
+              document.getElementById('num_aleator').innerHTML= score;
               modalC.style.opacity = "1";
               modalC.style.visibility = "visible";
               modal.classList.toggle("modal-close");
@@ -89,6 +111,9 @@ window.addEventListener( "message", function (e) {
 
 
 }, false);
+
+
+
 
 
 
