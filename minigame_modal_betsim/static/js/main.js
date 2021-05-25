@@ -51,7 +51,6 @@ window.onload = function () {
    
    var ln = navigator.language || navigator.userLanguage;
    let idioma = ln.split("-");
-   console.log(idioma );
    if (idioma[0] == 'en') {
      document.getElementById('language').innerHTML='en'
      document.getElementById('contenedor').innerHTML=modal_en;
@@ -75,7 +74,6 @@ window.addEventListener( "message", function (e) {
 
               let corazon = document.getElementById("img_points_ID");
               corazon.setAttribute("class","img_points");
-               console.log(corazon);
 
               // Para navegadores -webkit-
               corazon.addEventListener("webkitAnimationStart",function () {}, false);

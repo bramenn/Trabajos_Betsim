@@ -3,9 +3,175 @@ body{
 	background-color: #1068A8;
 }
 
+
+
+.texto_modal{
+	font-family: Cambria;
+	margin: 10px;
+	font-size: 26px;
+	text-align: center;
+	color: white;
+
+}
+
+.ganaste{
+	font-family: Cambria;
+	margin: 10px;
+	font-size: 30px;
+	text-align: center;
+	color: white;
+}
+
+
+
+
+
+.img_points{
+	animation: blur 0.5s ease-out;
+  	animation-duration: 2s;
+  	text-shadow:0px 0px 5px red,
+      0px 0px 7px #e5b332;
+
+}
+
+#img_points_ID{
+
+  display: inline-flex;
+  text-align: center;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 1000;
+  text-transform: uppercase;
+
+
+  
+}
+
+
+@keyframes blur{
+  from{
+      text-shadow: 0px 0px 10px #e5b332,
+      0px 0px 10px #e5b332, 
+      0px 0px 25px #e5b332,
+      0px 0px 25px #e5b332,
+      0px 0px 25px #e5b332,
+      0px 0px 25px #e5b332,
+      0px 0px 15px #e5b332,
+      0px 0px 15px #e5b332,
+      0px 0px 15px #e5b332,
+      0px 0px 5px #e5b332,
+      0px 0px 5px #e5b332,
+      0px 0px 5px #e5b332
+	  }
+}
+
+
+.animatet {
+ -webkit-animation-duration: 2s;
+ animation-duration: 3.5s;
+ -webkit-animation-fill-mode: both;
+ animation-fill-mode: both;
+ -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes flash {
+ 0%, 50%, 100% {
+ opacity: 1;
+ }
+25%, 75% {
+ opacity: 0;
+ }
+}
+@keyframes flash {
+ 0%, 50%, 100% {
+ opacity: 1;
+ }
+25%, 75% {
+ opacity: 0;
+ }
+}
+
+.flash {
+ -webkit-animation-name: flash;
+ animation-name: flash;
+}
+
+@keyframes animateBorderOne {
+  to {
+    outline-color: orange;
+    box-shadow: 10px 10px 0 15px #00226b;
+  }
+}
+
+
+
+#img_bycoins{
+	    width: 35px;
+	    height: 35px;
+	    margin: 5px 10px 0px 5px;
+}
+
+
+
+@media (max-width:3000px){
+.modal-container{  
+	opacity: 1;
+	visibility: visible;
+	position: fixed;
+	z-index: 1;
+	width: 50%;
+	height: 80%;
+	top: -5%;
+	left: 35%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow-y: initial !important;
+	
+
+
+}
+
+
+
+
+.modal{
+
+	display: block !important;
+	width: 100%;
+	text-align: center;
+	flex-direction: column;
+	justify-content: space-evenly;
+	position: relative;
+	transition: transform 2s;
+	overflow-y: initial !important;
+	height: 55%;
+    overflow-y: auto;
+	background-image: url("confeti.jpg");
+    color: #69D2E7;
+	outline: 15px dashed #e5b332;
+	box-shadow: 0 0 0 10px red;
+	animation: 0.5s animateBorderOne ease infinite;
+
+
+
+}
+
+
+
+iframe{
+	border: 5px solid gray;
+	margin: 5% 0 0 2%;
+	width: 30%;
+	height: 590px;
+}
+}
+/*-----------------------------------------*/
+
+
 /*-----------------------------------------*/
 /*Configuracion para celulares en vertical*/
-@media (max-width:2000px){
+@media (max-width:1400px){
 	
 
 .modal-container{  
@@ -49,69 +215,7 @@ body{
 }
 
 
-@keyframes animateBorderOne {
-  to {
-    outline-color: orange;
-    box-shadow: 10px 10px 0 15px #00226b;
-  }
-}
 
-
-.texto_modal{
-	font-family: Cambria;
-	margin: 10px;
-	font-size: 26px;
-	text-align: center;
-	color: white;
-
-}
-
-.ganaste{
-	font-family: Cambria;
-	margin: 10px;
-	font-size: 30px;
-	text-align: center;
-	color: white;
-}
-
-.img_points{
-	animation: blur 0.5s ease-out;
-  	animation-duration: 2s;
-  	text-shadow:0px 0px 5px red,
-      0px 0px 7px #e5b332;
-
-}
-
-#img_points_ID{
-
-  display: inline-flex;
-  text-align: center;
-  font-size: 28px;
-  color: #fff;
-  font-weight: 1000;
-  text-transform: uppercase;
-
-
-  
-}
-
-
-@keyframes blur{
-  from{
-      text-shadow: 0px 0px 10px #e5b332,
-      0px 0px 10px #e5b332, 
-      0px 0px 25px #e5b332,
-      0px 0px 25px #e5b332,
-      0px 0px 25px #e5b332,
-      0px 0px 25px #e5b332,
-      0px 0px 15px #e5b332,
-      0px 0px 15px #e5b332,
-      0px 0px 15px #e5b332,
-      0px 0px 5px #e5b332,
-      0px 0px 5px #e5b332,
-      0px 0px 5px #e5b332
-	  }
-}
 
 iframe{
 	border: 5px solid gray;
@@ -122,44 +226,6 @@ iframe{
 
 
 
-
-#img_bycoins{
-	    width: 35px;
-	    height: 35px;
-	    margin: 5px 10px 0px 5px;
-}
-
-
-
-.animatet {
- -webkit-animation-duration: 2s;
- animation-duration: 3.5s;
- -webkit-animation-fill-mode: both;
- animation-fill-mode: both;
- -webkit-animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes flash {
- 0%, 50%, 100% {
- opacity: 1;
- }
-25%, 75% {
- opacity: 0;
- }
-}
-@keyframes flash {
- 0%, 50%, 100% {
- opacity: 1;
- }
-25%, 75% {
- opacity: 0;
- }
-}
-
-.flash {
- -webkit-animation-name: flash;
- animation-name: flash;
-}
 
 
 }
